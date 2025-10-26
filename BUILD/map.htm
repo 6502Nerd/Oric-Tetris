@@ -1,0 +1,833 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML lang=fr dir=ltr>
+	<HEAD>
+		<meta name="robots" content="noindex">
+		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+		<title>PT3PLAYER</title>
+		<link href="C:\Users\dolom\osdk\documentation\documentation.css" rel="stylesheet" type="text/css">
+	</HEAD>
+	<BODY>
+<hr>
+<center>PT3PLAYER</center>
+<hr>
+<table>
+<tr>
+<td valign=top>
+<a name="Normal"></a>
+<h1>Normal memory</h1>
+<table class='memmap'>
+<thead>
+<tr>
+<th colspan=4>Section layout</th>
+</tr>
+<tr>
+<th>Address</th><th colspan="2">Size</th><th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$245</td><td colspan="2" align="right">202</td><td>OricUserIRQ</td></tr>
+<tr>
+<td>$30f</td><td colspan="2" align="right">1265</td><td>VIA_ORA</td></tr>
+<tr>
+<td><b>$800</b></td><td align="right" id='osdk_start'>161</td><td align="right">17</td><td>osdk_start</td></tr>
+<tr>
+<td>$811</td><td colspan="2" align="right">1</td><td>retstack</td></tr>
+<tr>
+<td>$812</td><td colspan="2" align="right">10</td><td>enter</td></tr>
+<tr>
+<td>$81c</td><td colspan="2" align="right">8</td><td>savereg</td></tr>
+<tr>
+<td>$824</td><td colspan="2" align="right">61</td><td>noregstosave</td></tr>
+<tr>
+<td>$861</td><td colspan="2" align="right">24</td><td>leave</td></tr>
+<tr>
+<td>$879</td><td colspan="2" align="right">8</td><td>restorereg</td></tr>
+<tr>
+<td>$881</td><td colspan="2" align="right">29</td><td>noregstorestore</td></tr>
+<tr>
+<td>$89e</td><td colspan="2" align="right">3</td><td>jsrvect</td></tr>
+<tr>
+<td>$8a1</td><td align="right" id='_exit'>26</td><td align="right">5</td><td>_exit</td></tr>
+<tr>
+<td>$8a6</td><td colspan="2" align="right">4</td><td>reterr</td></tr>
+<tr>
+<td>$8aa</td><td colspan="2" align="right">4</td><td>false, retzero</td></tr>
+<tr>
+<td>$8ae</td><td colspan="2" align="right">5</td><td>true</td></tr>
+<tr>
+<td>$8b3</td><td colspan="2" align="right">8</td><td>cfi</td></tr>
+<tr>
+<td>$8bb</td><td align="right" id='_main'>132</td><td align="right">79</td><td>_main</td></tr>
+<tr>
+<td>$90a</td><td colspan="2" align="right">44</td><td>Lmain133</td></tr>
+<tr>
+<td>$936</td><td colspan="2" align="right">5</td><td>Lmain137</td></tr>
+<tr>
+<td>$93b</td><td colspan="2" align="right">4</td><td>Lmain132</td></tr>
+<tr>
+<td>$93f</td><td align="right" id='_printf'>30</td><td align="right">15</td><td>_printf</td></tr>
+<tr>
+<td>$94e</td><td colspan="2" align="right">3</td><td>printvect</td></tr>
+<tr>
+<td>$951</td><td colspan="2" align="right">12</td><td>storechar</td></tr>
+<tr>
+<td>$95d</td><td align="right" id='_sprintf'>295</td><td align="right">24</td><td>_sprintf</td></tr>
+<tr>
+<td>$975</td><td colspan="2" align="right">15</td><td>printf</td></tr>
+<tr>
+<td>$984</td><td colspan="2" align="right">9</td><td>formloop</td></tr>
+<tr>
+<td>$98d</td><td colspan="2" align="right">6</td><td>charput</td></tr>
+<tr>
+<td>$993</td><td colspan="2" align="right">1</td><td>endform</td></tr>
+<tr>
+<td>$994</td><td colspan="2" align="right">41</td><td>printfloat</td></tr>
+<tr>
+<td>$9bd</td><td colspan="2" align="right">30</td><td>formfield</td></tr>
+<tr>
+<td>$9db</td><td colspan="2" align="right">20</td><td>printchar</td></tr>
+<tr>
+<td>$9ef</td><td colspan="2" align="right">22</td><td>printstr</td></tr>
+<tr>
+<td>$a05</td><td colspan="2" align="right">16</td><td>prtsloop</td></tr>
+<tr>
+<td>$a15</td><td colspan="2" align="right">6</td><td>endprts</td></tr>
+<tr>
+<td>$a1b</td><td colspan="2" align="right">19</td><td>printint</td></tr>
+<tr>
+<td>$a2e</td><td colspan="2" align="right">19</td><td>printuint</td></tr>
+<tr>
+<td>$a41</td><td colspan="2" align="right">23</td><td>printhex</td></tr>
+<tr>
+<td>$a58</td><td colspan="2" align="right">1</td><td>saveptrform</td></tr>
+<tr>
+<td>$a59</td><td colspan="2" align="right">2</td><td>saveform</td></tr>
+<tr>
+<td>$a5b</td><td colspan="2" align="right">1</td><td>saveptrarg</td></tr>
+<tr>
+<td>$a5c</td><td colspan="2" align="right">11</td><td>hexbyte</td></tr>
+<tr>
+<td>$a67</td><td colspan="2" align="right">6</td><td>nibble</td></tr>
+<tr>
+<td>$a6d</td><td colspan="2" align="right">6</td><td>chiffre</td></tr>
+<tr>
+<td>$a73</td><td colspan="2" align="right">17</td><td>nextarg</td></tr>
+<tr>
+<td>$a84</td><td align="right" id='_itoa'>120</td><td align="right">11</td><td>_itoa</td></tr>
+<tr>
+<td>$a8f</td><td colspan="2" align="right">27</td><td>itoa</td></tr>
+<tr>
+<td>$aaa</td><td colspan="2" align="right">17</td><td>itoaloop</td></tr>
+<tr>
+<td>$abb</td><td colspan="2" align="right">21</td><td>poploop</td></tr>
+<tr>
+<td>$ad0</td><td colspan="2" align="right">8</td><td>uitoa</td></tr>
+<tr>
+<td>$ad8</td><td colspan="2" align="right">12</td><td>bufconv</td></tr>
+<tr>
+<td>$ae4</td><td colspan="2" align="right">5</td><td>udiv10</td></tr>
+<tr>
+<td>$ae9</td><td colspan="2" align="right">11</td><td>udiv10lp</td></tr>
+<tr>
+<td>$af4</td><td colspan="2" align="right">8</td><td>contdiv</td></tr>
+<tr>
+<td>$afc</td><td align="right" id='_getchar'>12</td><td align="right">12</td><td>_getchar</td></tr>
+<tr>
+<td>$b08</td><td align="right" id='_putchar'>19</td><td align="right">4</td><td>_putchar</td></tr>
+<tr>
+<td>$b0c</td><td colspan="2" align="right">11</td><td>putchar</td></tr>
+<tr>
+<td>$b17</td><td colspan="2" align="right">4</td><td>putchar2</td></tr>
+<tr>
+<td>$b1b</td><td align="right" id='_puts'>33</td><td align="right">13</td><td>_puts</td></tr>
+<tr>
+<td>$b28</td><td colspan="2" align="right">15</td><td>putsloop</td></tr>
+<tr>
+<td>$b37</td><td colspan="2" align="right">5</td><td>endputs</td></tr>
+<tr>
+<td>$b3c</td><td align="right" id='_gets'>64</td><td align="right">11</td><td>_gets</td></tr>
+<tr>
+<td>$b47</td><td colspan="2" align="right">2</td><td>gets</td></tr>
+<tr>
+<td>$b49</td><td colspan="2" align="right">22</td><td>getsloop</td></tr>
+<tr>
+<td>$b5f</td><td colspan="2" align="right">7</td><td>echochar</td></tr>
+<tr>
+<td>$b66</td><td colspan="2" align="right">8</td><td>backspace</td></tr>
+<tr>
+<td>$b6e</td><td colspan="2" align="right">14</td><td>endgets</td></tr>
+<tr>
+<td>$b7c</td><td align="right" id='_PT3Counter'>6</td><td align="right">1</td><td>_PT3Counter</td></tr>
+<tr>
+<td>$b7d</td><td colspan="2" align="right">2</td><td>OldIRQ</td></tr>
+<tr>
+<td>$b7f</td><td colspan="2" align="right">3</td><td>CurrentPT3IRQ</td></tr>
+<tr>
+<td>$b82</td><td align="right" id='_pt3_init_irq'>36</td><td align="right">36</td><td>_pt3_init_irq</td></tr>
+<tr>
+<td>$ba6</td><td align="right" id='_pt3_do_irq'>26</td><td align="right">22</td><td>_pt3_do_irq</td></tr>
+<tr>
+<td>$bbc</td><td colspan="2" align="right">4</td><td>skip_pt3_irq</td></tr>
+<tr>
+<td>$bc0</td><td align="right" id='_pt3_init'>28</td><td align="right">28</td><td>_pt3_init</td></tr>
+<tr>
+<td>$bdc</td><td align="right" id='_pt3_unmute'>14</td><td align="right">14</td><td>_pt3_unmute</td></tr>
+<tr>
+<td>$bea</td><td align="right" id='_pt3_mute'>4232</td><td align="right">16</td><td>_pt3_mute</td></tr>
+<tr>
+<td>$bfa</td><td colspan="2" align="right">1</td><td>MUTERTS</td></tr>
+<tr>
+<td>$bfb</td><td colspan="2" align="right">23</td><td>CrPsPtr</td></tr>
+<tr>
+<td>$c12</td><td colspan="2" align="right">13</td><td>CHECKLP</td></tr>
+<tr>
+<td>$c1f</td><td colspan="2" align="right">8</td><td>s1</td></tr>
+<tr>
+<td>$c27</td><td colspan="2" align="right">18</td><td>MUTE</td></tr>
+<tr>
+<td>$c39</td><td colspan="2" align="right">90</td><td>INIT</td></tr>
+<tr>
+<td>$c93</td><td colspan="2" align="right">62</td><td>s2</td></tr>
+<tr>
+<td>$cd1</td><td colspan="2" align="right">113</td><td>LOOP_LDIR</td></tr>
+<tr>
+<td>$d42</td><td colspan="2" align="right">2</td><td>L20</td></tr>
+<tr>
+<td>$d44</td><td colspan="2" align="right">11</td><td>L21</td></tr>
+<tr>
+<td>$d4f</td><td colspan="2" align="right">1</td><td>s7b</td></tr>
+<tr>
+<td>$d50</td><td colspan="2" align="right">54</td><td>s8b</td></tr>
+<tr>
+<td>$d86</td><td colspan="2" align="right">4</td><td>s9b</td></tr>
+<tr>
+<td>$d8a</td><td colspan="2" align="right">4</td><td>sa</td></tr>
+<tr>
+<td>$d8e</td><td colspan="2" align="right">2</td><td>sb</td></tr>
+<tr>
+<td>$d90</td><td colspan="2" align="right">62</td><td>sb1</td></tr>
+<tr>
+<td>$dce</td><td colspan="2" align="right">16</td><td>L1</td></tr>
+<tr>
+<td>$dde</td><td colspan="2" align="right">32</td><td>sc</td></tr>
+<tr>
+<td>$dfe</td><td colspan="2" align="right">4</td><td>L2</td></tr>
+<tr>
+<td>$e02</td><td colspan="2" align="right">13</td><td>L3</td></tr>
+<tr>
+<td>$e0f</td><td colspan="2" align="right">35</td><td>sd</td></tr>
+<tr>
+<td>$e32</td><td colspan="2" align="right">12</td><td>sf</td></tr>
+<tr>
+<td>$e3e</td><td colspan="2" align="right">13</td><td>sg</td></tr>
+<tr>
+<td>$e4b</td><td colspan="2" align="right">21</td><td>sg1</td></tr>
+<tr>
+<td>$e60</td><td colspan="2" align="right">31</td><td>CORR_1</td></tr>
+<tr>
+<td>$e7f</td><td colspan="2" align="right">26</td><td>CORR_2</td></tr>
+<tr>
+<td>$e99</td><td colspan="2" align="right">3</td><td>sh</td></tr>
+<tr>
+<td>$e9c</td><td colspan="2" align="right">27</td><td>TC_EXIT</td></tr>
+<tr>
+<td>$eb7</td><td colspan="2" align="right">15</td><td>M1</td></tr>
+<tr>
+<td>$ec6</td><td colspan="2" align="right">22</td><td>INITV2</td></tr>
+<tr>
+<td>$edc</td><td colspan="2" align="right">2</td><td>INITV1</td></tr>
+<tr>
+<td>$ede</td><td colspan="2" align="right">13</td><td>M2</td></tr>
+<tr>
+<td>$eeb</td><td colspan="2" align="right">36</td><td>si</td></tr>
+<tr>
+<td>$f0f</td><td colspan="2" align="right">8</td><td>M3</td></tr>
+<tr>
+<td>$f17</td><td colspan="2" align="right">19</td><td>PD_OrSm</td></tr>
+<tr>
+<td>$f2a</td><td colspan="2" align="right">5</td><td>sj</td></tr>
+<tr>
+<td>$f2f</td><td colspan="2" align="right">1</td><td>PD_SAM, sj1</td></tr>
+<tr>
+<td>$f30</td><td colspan="2" align="right">2</td><td>PD_SAM_</td></tr>
+<tr>
+<td>$f32</td><td colspan="2" align="right">17</td><td>SamPtrs</td></tr>
+<tr>
+<td>$f43</td><td colspan="2" align="right">19</td><td>MODADDR</td></tr>
+<tr>
+<td>$f56</td><td colspan="2" align="right">19</td><td>PD_VOL</td></tr>
+<tr>
+<td>$f69</td><td colspan="2" align="right">11</td><td>PD_EOff</td></tr>
+<tr>
+<td>$f74</td><td colspan="2" align="right">17</td><td>PD_SorE</td></tr>
+<tr>
+<td>$f85</td><td colspan="2" align="right">7</td><td>sl</td></tr>
+<tr>
+<td>$f8c</td><td colspan="2" align="right">6</td><td>PD_ENV</td></tr>
+<tr>
+<td>$f92</td><td colspan="2" align="right">6</td><td>PD_ORN</td></tr>
+<tr>
+<td>$f98</td><td colspan="2" align="right">15</td><td>PD_ESAM</td></tr>
+<tr>
+<td>$fa7</td><td colspan="2" align="right">10</td><td>sm</td></tr>
+<tr>
+<td>$fb1</td><td colspan="2" align="right">3</td><td>sn</td></tr>
+<tr>
+<td>$fb4</td><td colspan="2" align="right">20</td><td>PTDECOD</td></tr>
+<tr>
+<td>$fc8</td><td colspan="2" align="right">4</td><td>PD_LOOP</td></tr>
+<tr>
+<td>$fcc</td><td colspan="2" align="right">10</td><td>PD_LP2</td></tr>
+<tr>
+<td>$fd6</td><td colspan="2" align="right">10</td><td>so</td></tr>
+<tr>
+<td>$fe0</td><td colspan="2" align="right">7</td><td>so1</td></tr>
+<tr>
+<td>$fe7</td><td colspan="2" align="right">5</td><td>so11</td></tr>
+<tr>
+<td>$fec</td><td colspan="2" align="right">9</td><td>so2</td></tr>
+<tr>
+<td>$ff5</td><td colspan="2" align="right">7</td><td>so3</td></tr>
+<tr>
+<td>$ffc</td><td colspan="2" align="right">5</td><td>so4</td></tr>
+<tr>
+<td>$1001</td><td colspan="2" align="right">13</td><td>so5</td></tr>
+<tr>
+<td>$100e</td><td colspan="2" align="right">13</td><td>so6</td></tr>
+<tr>
+<td>$101b</td><td colspan="2" align="right">26</td><td>so7</td></tr>
+<tr>
+<td>$1035</td><td colspan="2" align="right">6</td><td>PD_NOIS</td></tr>
+<tr>
+<td>$103b</td><td colspan="2" align="right">11</td><td>PD_REL</td></tr>
+<tr>
+<td>$1046</td><td colspan="2" align="right">12</td><td>PD_NOTE</td></tr>
+<tr>
+<td>$1052</td><td colspan="2" align="right">8</td><td>PD_RES</td></tr>
+<tr>
+<td>$105a</td><td colspan="2" align="right">5</td><td>bres</td></tr>
+<tr>
+<td>$105f</td><td colspan="2" align="right">9</td><td>PD_FIN</td></tr>
+<tr>
+<td>$1068</td><td colspan="2" align="right">31</td><td>C_PORTM</td></tr>
+<tr>
+<td>$1087</td><td colspan="2" align="right">37</td><td>st</td></tr>
+<tr>
+<td>$10ac</td><td colspan="2" align="right">62</td><td>PrNote</td></tr>
+<tr>
+<td>$10ea</td><td colspan="2" align="right">8</td><td>Version</td></tr>
+<tr>
+<td>$10f2</td><td colspan="2" align="right">13</td><td>PrSlide</td></tr>
+<tr>
+<td>$10ff</td><td colspan="2" align="right">22</td><td>OLDPRTM</td></tr>
+<tr>
+<td>$1115</td><td colspan="2" align="right">20</td><td>sw</td></tr>
+<tr>
+<td>$1129</td><td colspan="2" align="right">36</td><td>NOSIG</td></tr>
+<tr>
+<td>$114d</td><td colspan="2" align="right">23</td><td>SET_STP</td></tr>
+<tr>
+<td>$1164</td><td colspan="2" align="right">20</td><td>C_GLISS</td></tr>
+<tr>
+<td>$1178</td><td colspan="2" align="right">20</td><td>sy</td></tr>
+<tr>
+<td>$118c</td><td colspan="2" align="right">2</td><td>sz</td></tr>
+<tr>
+<td>$118e</td><td colspan="2" align="right">26</td><td>GL36, saa</td></tr>
+<tr>
+<td>$11a8</td><td colspan="2" align="right">3</td><td>sac</td></tr>
+<tr>
+<td>$11ab</td><td colspan="2" align="right">10</td><td>C_SMPOS</td></tr>
+<tr>
+<td>$11b5</td><td colspan="2" align="right">5</td><td>sad</td></tr>
+<tr>
+<td>$11ba</td><td colspan="2" align="right">10</td><td>C_ORPOS</td></tr>
+<tr>
+<td>$11c4</td><td colspan="2" align="right">5</td><td>sae</td></tr>
+<tr>
+<td>$11c9</td><td colspan="2" align="right">10</td><td>C_VIBRT</td></tr>
+<tr>
+<td>$11d3</td><td colspan="2" align="right">18</td><td>saf</td></tr>
+<tr>
+<td>$11e5</td><td colspan="2" align="right">18</td><td>sag</td></tr>
+<tr>
+<td>$11f7</td><td colspan="2" align="right">37</td><td>C_ENGLS</td></tr>
+<tr>
+<td>$121c</td><td colspan="2" align="right">1</td><td>sah</td></tr>
+<tr>
+<td>$121d</td><td colspan="2" align="right">10</td><td>C_DELAY</td></tr>
+<tr>
+<td>$1227</td><td colspan="2" align="right">4</td><td>sak</td></tr>
+<tr>
+<td>$122b</td><td colspan="2" align="right">39</td><td>SETENV</td></tr>
+<tr>
+<td>$1252</td><td colspan="2" align="right">21</td><td>sam</td></tr>
+<tr>
+<td>$1267</td><td colspan="2" align="right">1</td><td>C_NOP</td></tr>
+<tr>
+<td>$1268</td><td colspan="2" align="right">13</td><td>SETORN</td></tr>
+<tr>
+<td>$1275</td><td colspan="2" align="right">17</td><td>OrnPtrs</td></tr>
+<tr>
+<td>$1286</td><td colspan="2" align="right">17</td><td>MDADDR2</td></tr>
+<tr>
+<td>$1297</td><td colspan="2" align="right">32</td><td>SPCCOMS</td></tr>
+<tr>
+<td>$12b7</td><td colspan="2" align="right">30</td><td>CHREGS</td></tr>
+<tr>
+<td>$12d5</td><td colspan="2" align="right">70</td><td>saq</td></tr>
+<tr>
+<td>$131b</td><td colspan="2" align="right">16</td><td>CH_ORPS</td></tr>
+<tr>
+<td>$132b</td><td colspan="2" align="right">6</td><td>CH_NTP</td></tr>
+<tr>
+<td>$1331</td><td colspan="2" align="right">72</td><td>CH_NOK</td></tr>
+<tr>
+<td>$1379</td><td colspan="2" align="right">65</td><td>CH_SMPS</td></tr>
+<tr>
+<td>$13ba</td><td colspan="2" align="right">73</td><td>CH_NOAC</td></tr>
+<tr>
+<td>$1403</td><td colspan="2" align="right">87</td><td>saq1</td></tr>
+<tr>
+<td>$145a</td><td colspan="2" align="right">36</td><td>CH_STPP</td></tr>
+<tr>
+<td>$147e</td><td colspan="2" align="right">30</td><td>CH_AMP</td></tr>
+<tr>
+<td>$149c</td><td colspan="2" align="right">9</td><td>CH_AMIN</td></tr>
+<tr>
+<td>$14a5</td><td colspan="2" align="right">6</td><td>CH_SVAM</td></tr>
+<tr>
+<td>$14ab</td><td colspan="2" align="right">15</td><td>CH_NOAM</td></tr>
+<tr>
+<td>$14ba</td><td colspan="2" align="right">6</td><td>CH_APOS</td></tr>
+<tr>
+<td>$14c0</td><td colspan="2" align="right">29</td><td>CH_VOL</td></tr>
+<tr>
+<td>$14dd</td><td colspan="2" align="right">14</td><td>CH_ENV</td></tr>
+<tr>
+<td>$14eb</td><td colspan="2" align="right">47</td><td>CH_NOEN</td></tr>
+<tr>
+<td>$151a</td><td colspan="2" align="right">20</td><td>NO_ENAC</td></tr>
+<tr>
+<td>$152e</td><td colspan="2" align="right">25</td><td>NO_ENSL</td></tr>
+<tr>
+<td>$1547</td><td colspan="2" align="right">7</td><td>CH_MIX</td></tr>
+<tr>
+<td>$154e</td><td colspan="2" align="right">19</td><td>CH_EXIT</td></tr>
+<tr>
+<td>$1561</td><td colspan="2" align="right">21</td><td>saq2</td></tr>
+<tr>
+<td>$1576</td><td colspan="2" align="right">12</td><td>sas</td></tr>
+<tr>
+<td>$1582</td><td colspan="2" align="right">19</td><td>sat</td></tr>
+<tr>
+<td>$1595</td><td colspan="2" align="right">5</td><td>CH_ONDL</td></tr>
+<tr>
+<td>$159a</td><td colspan="2" align="right">21</td><td>PLAY</td></tr>
+<tr>
+<td>$15af</td><td colspan="2" align="right">8</td><td>sat1</td></tr>
+<tr>
+<td>$15b7</td><td colspan="2" align="right">17</td><td>AdInPtA, sat2</td></tr>
+<tr>
+<td>$15c8</td><td colspan="2" align="right">21</td><td>sat3</td></tr>
+<tr>
+<td>$15dd</td><td colspan="2" align="right">12</td><td>sar</td></tr>
+<tr>
+<td>$15e9</td><td colspan="2" align="right">17</td><td>LPosPtr</td></tr>
+<tr>
+<td>$15fa</td><td colspan="2" align="right">22</td><td>PLNLP</td></tr>
+<tr>
+<td>$1610</td><td colspan="2" align="right">73</td><td>PatsPtr</td></tr>
+<tr>
+<td>$1659</td><td colspan="2" align="right">21</td><td>PL1A, PSP_</td></tr>
+<tr>
+<td>$166e</td><td colspan="2" align="right">13</td><td>PL1B</td></tr>
+<tr>
+<td>$167b</td><td colspan="2" align="right">21</td><td>AdInPtB</td></tr>
+<tr>
+<td>$1690</td><td colspan="2" align="right">13</td><td>PL1C</td></tr>
+<tr>
+<td>$169d</td><td colspan="2" align="right">21</td><td>AdInPtC</td></tr>
+<tr>
+<td>$16b2</td><td colspan="2" align="right">5</td><td>Delay, PL1D</td></tr>
+<tr>
+<td>$16b7</td><td colspan="2" align="right">121</td><td>PL2</td></tr>
+<tr>
+<td>$1730</td><td colspan="2" align="right">11</td><td>AddToEn</td></tr>
+<tr>
+<td>$173b</td><td colspan="2" align="right">2</td><td>sau</td></tr>
+<tr>
+<td>$173d</td><td colspan="2" align="right">58</td><td>sau1</td></tr>
+<tr>
+<td>$1777</td><td colspan="2" align="right">5</td><td>Env_Del</td></tr>
+<tr>
+<td>$177c</td><td colspan="2" align="right">15</td><td>ESldAdd</td></tr>
+<tr>
+<td>$178b</td><td colspan="2" align="right">424</td><td>ROUT</td></tr>
+<tr>
+<td>$1933</td><td colspan="2" align="right">29</td><td>OUT_S</td></tr>
+<tr>
+<td>$1950</td><td colspan="2" align="right">79</td><td>FIX16BITS</td></tr>
+<tr>
+<td>$199f</td><td colspan="2" align="right">16</td><td>NT_DATA</td></tr>
+<tr>
+<td>$19af</td><td colspan="2" align="right">12</td><td>TCOLD_0, T_</td></tr>
+<tr>
+<td>$19bb</td><td colspan="2" align="right">2</td><td>TCNEW_1, TCOLD_1</td></tr>
+<tr>
+<td>$19bd</td><td colspan="2" align="right">18</td><td>TCOLD_2</td></tr>
+<tr>
+<td>$19cf</td><td colspan="2" align="right">1</td><td>TCNEW_3</td></tr>
+<tr>
+<td>$19d0</td><td colspan="2" align="right">9</td><td>TCOLD_3</td></tr>
+<tr>
+<td>$19d9</td><td colspan="2" align="right">11</td><td>TCNEW_0</td></tr>
+<tr>
+<td>$19e4</td><td colspan="2" align="right">11</td><td>TCNEW_2</td></tr>
+<tr>
+<td>$19ef</td><td colspan="2" align="right">4</td><td>EMPTYSAMORN</td></tr>
+<tr>
+<td>$19f3</td><td colspan="2" align="right">24</td><td>T1_, T_NEW_1, T_OLD_1</td></tr>
+<tr>
+<td>$1a0b</td><td colspan="2" align="right">24</td><td>T_OLD_2</td></tr>
+<tr>
+<td>$1a23</td><td colspan="2" align="right">2</td><td>T_NEW_3, T_OLD_3</td></tr>
+<tr>
+<td>$1a25</td><td colspan="2" align="right">24</td><td>T_NEW_0, T_OLD_0</td></tr>
+<tr>
+<td>$1a3d</td><td colspan="2" align="right">24</td><td>T_NEW_2</td></tr>
+<tr>
+<td>$1a55</td><td colspan="2" align="right">1</td><td>APsInOr, ChanA, FILE_END, VARS</td></tr>
+<tr>
+<td>$1a56</td><td colspan="2" align="right">1</td><td>APsInSm</td></tr>
+<tr>
+<td>$1a57</td><td colspan="2" align="right">1</td><td>ACrAmSl</td></tr>
+<tr>
+<td>$1a58</td><td colspan="2" align="right">1</td><td>ACrNsSl</td></tr>
+<tr>
+<td>$1a59</td><td colspan="2" align="right">1</td><td>ACrEnSl</td></tr>
+<tr>
+<td>$1a5a</td><td colspan="2" align="right">1</td><td>ATSlCnt</td></tr>
+<tr>
+<td>$1a5b</td><td colspan="2" align="right">2</td><td>ACrTnSl</td></tr>
+<tr>
+<td>$1a5d</td><td colspan="2" align="right">2</td><td>ATnAcc</td></tr>
+<tr>
+<td>$1a5f</td><td colspan="2" align="right">1</td><td>ACOnOff</td></tr>
+<tr>
+<td>$1a60</td><td colspan="2" align="right">1</td><td>AOnOffD</td></tr>
+<tr>
+<td>$1a61</td><td colspan="2" align="right">1</td><td>AOffOnD</td></tr>
+<tr>
+<td>$1a62</td><td colspan="2" align="right">2</td><td>AOrnPtr</td></tr>
+<tr>
+<td>$1a64</td><td colspan="2" align="right">2</td><td>ASamPtr</td></tr>
+<tr>
+<td>$1a66</td><td colspan="2" align="right">1</td><td>ANNtSkp</td></tr>
+<tr>
+<td>$1a67</td><td colspan="2" align="right">1</td><td>ANote</td></tr>
+<tr>
+<td>$1a68</td><td colspan="2" align="right">1</td><td>ASlToNt</td></tr>
+<tr>
+<td>$1a69</td><td colspan="2" align="right">1</td><td>AEnv_En</td></tr>
+<tr>
+<td>$1a6a</td><td colspan="2" align="right">1</td><td>AFlags</td></tr>
+<tr>
+<td>$1a6b</td><td colspan="2" align="right">1</td><td>ATnSlDl</td></tr>
+<tr>
+<td>$1a6c</td><td colspan="2" align="right">2</td><td>ATSlStp</td></tr>
+<tr>
+<td>$1a6e</td><td colspan="2" align="right">2</td><td>ATnDelt</td></tr>
+<tr>
+<td>$1a70</td><td colspan="2" align="right">1</td><td>ANtSkCn</td></tr>
+<tr>
+<td>$1a71</td><td colspan="2" align="right">1</td><td>AVolume</td></tr>
+<tr>
+<td>$1a72</td><td colspan="2" align="right">1</td><td>BPsInOr, ChanB</td></tr>
+<tr>
+<td>$1a73</td><td colspan="2" align="right">1</td><td>BPsInSm</td></tr>
+<tr>
+<td>$1a74</td><td colspan="2" align="right">1</td><td>BCrAmSl</td></tr>
+<tr>
+<td>$1a75</td><td colspan="2" align="right">1</td><td>BCrNsSl</td></tr>
+<tr>
+<td>$1a76</td><td colspan="2" align="right">1</td><td>BCrEnSl</td></tr>
+<tr>
+<td>$1a77</td><td colspan="2" align="right">1</td><td>BTSlCnt</td></tr>
+<tr>
+<td>$1a78</td><td colspan="2" align="right">2</td><td>BCrTnSl</td></tr>
+<tr>
+<td>$1a7a</td><td colspan="2" align="right">2</td><td>BTnAcc</td></tr>
+<tr>
+<td>$1a7c</td><td colspan="2" align="right">1</td><td>BCOnOff</td></tr>
+<tr>
+<td>$1a7d</td><td colspan="2" align="right">1</td><td>BOnOffD</td></tr>
+<tr>
+<td>$1a7e</td><td colspan="2" align="right">1</td><td>BOffOnD</td></tr>
+<tr>
+<td>$1a7f</td><td colspan="2" align="right">2</td><td>BOrnPtr</td></tr>
+<tr>
+<td>$1a81</td><td colspan="2" align="right">2</td><td>BSamPtr</td></tr>
+<tr>
+<td>$1a83</td><td colspan="2" align="right">1</td><td>BNNtSkp</td></tr>
+<tr>
+<td>$1a84</td><td colspan="2" align="right">1</td><td>BNote</td></tr>
+<tr>
+<td>$1a85</td><td colspan="2" align="right">1</td><td>BSlToNt</td></tr>
+<tr>
+<td>$1a86</td><td colspan="2" align="right">1</td><td>BEnv_En</td></tr>
+<tr>
+<td>$1a87</td><td colspan="2" align="right">1</td><td>BFlags</td></tr>
+<tr>
+<td>$1a88</td><td colspan="2" align="right">1</td><td>BTnSlDl</td></tr>
+<tr>
+<td>$1a89</td><td colspan="2" align="right">2</td><td>BTSlStp</td></tr>
+<tr>
+<td>$1a8b</td><td colspan="2" align="right">2</td><td>BTnDelt</td></tr>
+<tr>
+<td>$1a8d</td><td colspan="2" align="right">1</td><td>BNtSkCn</td></tr>
+<tr>
+<td>$1a8e</td><td colspan="2" align="right">1</td><td>BVolume</td></tr>
+<tr>
+<td>$1a8f</td><td colspan="2" align="right">1</td><td>CPsInOr, ChanC</td></tr>
+<tr>
+<td>$1a90</td><td colspan="2" align="right">1</td><td>CPsInSm</td></tr>
+<tr>
+<td>$1a91</td><td colspan="2" align="right">1</td><td>CCrAmSl</td></tr>
+<tr>
+<td>$1a92</td><td colspan="2" align="right">1</td><td>CCrNsSl</td></tr>
+<tr>
+<td>$1a93</td><td colspan="2" align="right">1</td><td>CCrEnSl</td></tr>
+<tr>
+<td>$1a94</td><td colspan="2" align="right">1</td><td>CTSlCnt</td></tr>
+<tr>
+<td>$1a95</td><td colspan="2" align="right">2</td><td>CCrTnSl</td></tr>
+<tr>
+<td>$1a97</td><td colspan="2" align="right">2</td><td>CTnAcc</td></tr>
+<tr>
+<td>$1a99</td><td colspan="2" align="right">1</td><td>CCOnOff</td></tr>
+<tr>
+<td>$1a9a</td><td colspan="2" align="right">1</td><td>COnOffD</td></tr>
+<tr>
+<td>$1a9b</td><td colspan="2" align="right">1</td><td>COffOnD</td></tr>
+<tr>
+<td>$1a9c</td><td colspan="2" align="right">2</td><td>COrnPtr</td></tr>
+<tr>
+<td>$1a9e</td><td colspan="2" align="right">2</td><td>CSamPtr</td></tr>
+<tr>
+<td>$1aa0</td><td colspan="2" align="right">1</td><td>CNNtSkp</td></tr>
+<tr>
+<td>$1aa1</td><td colspan="2" align="right">1</td><td>CNote</td></tr>
+<tr>
+<td>$1aa2</td><td colspan="2" align="right">1</td><td>CSlToNt</td></tr>
+<tr>
+<td>$1aa3</td><td colspan="2" align="right">1</td><td>CEnv_En</td></tr>
+<tr>
+<td>$1aa4</td><td colspan="2" align="right">1</td><td>CFlags</td></tr>
+<tr>
+<td>$1aa5</td><td colspan="2" align="right">1</td><td>CTnSlDl</td></tr>
+<tr>
+<td>$1aa6</td><td colspan="2" align="right">2</td><td>CTSlStp</td></tr>
+<tr>
+<td>$1aa8</td><td colspan="2" align="right">2</td><td>CTnDelt</td></tr>
+<tr>
+<td>$1aaa</td><td colspan="2" align="right">1</td><td>CNtSkCn</td></tr>
+<tr>
+<td>$1aab</td><td colspan="2" align="right">1</td><td>CVolume</td></tr>
+<tr>
+<td>$1aac</td><td colspan="2" align="right">1</td><td>DelyCnt</td></tr>
+<tr>
+<td>$1aad</td><td colspan="2" align="right">2</td><td>CurESld</td></tr>
+<tr>
+<td>$1aaf</td><td colspan="2" align="right">1</td><td>CurEDel</td></tr>
+<tr>
+<td>$1ab0</td><td colspan="2" align="right">1</td><td>Ns_Base, Ns_Base_AddToNs</td></tr>
+<tr>
+<td>$1ab1</td><td colspan="2" align="right">1</td><td>AddToNs</td></tr>
+<tr>
+<td>$1ab2</td><td colspan="2" align="right">10</td><td>AYREGS, VT_</td></tr>
+<tr>
+<td>$1abc</td><td colspan="2" align="right">4</td><td>Ampl</td></tr>
+<tr>
+<td>$1ac0</td><td colspan="2" align="right">2</td><td>EnvBase</td></tr>
+<tr>
+<td>$1ac2</td><td colspan="2" align="right">240</td><td>VAR0END</td></tr>
+<tr>
+<td>$1bb2</td><td colspan="2" align="right">192</td><td>NT_</td></tr>
+<tr>
+<td>$1c72</td><td align="right" id='VARS_END'>1470</td><td align="right">1470</td><td>VARS_END, _smariopt3</td></tr>
+<tr>
+<td>$2230</td><td align="right" id='osdk_stack'>256</td><td align="right">256</td><td>osdk_stack</td></tr>
+<tr>
+<td>$2330</td><td align="right" id='osdk_check'>4</td><td align="right">4</td><td>osdk_check</td></tr>
+<tr>
+<td>$2334</td><td align="right" id='osdk_end'>40139</td><td align="right">40139</td><td>osdk_end</td></tr>
+</tbody>
+</table>
+</td>
+<td valign=top>
+<a name="Zero"></a>
+<h1>Zero page</h1>
+<table class='memmap'>
+<thead>
+<tr>
+<th colspan=4>Section layout</th>
+</tr>
+<tr>
+<th>Address</th><th colspan="2">Size</th><th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>$00</b></td><td colspan="2" align="right">1</td><td>PsInOr, TonA</td></tr>
+<tr>
+<td>$01</td><td colspan="2" align="right">1</td><td>PsInSm</td></tr>
+<tr>
+<td>$02</td><td colspan="2" align="right">1</td><td>CrAmSl, TonB</td></tr>
+<tr>
+<td>$03</td><td colspan="2" align="right">1</td><td>CrNsSl</td></tr>
+<tr>
+<td>$04</td><td colspan="2" align="right">1</td><td>CrEnSl, TonC</td></tr>
+<tr>
+<td>$05</td><td colspan="2" align="right">1</td><td>TSlCnt</td></tr>
+<tr>
+<td>$06</td><td colspan="2" align="right">1</td><td>CrTnSl, Noise</td></tr>
+<tr>
+<td>$07</td><td colspan="2" align="right">1</td><td>Mixer</td></tr>
+<tr>
+<td>$08</td><td colspan="2" align="right">1</td><td>AmplA, TnAcc</td></tr>
+<tr>
+<td>$09</td><td colspan="2" align="right">1</td><td>AmplB</td></tr>
+<tr>
+<td>$0a</td><td colspan="2" align="right">1</td><td>AmplC, COnOff</td></tr>
+<tr>
+<td>$0b</td><td colspan="2" align="right">1</td><td>Env, OnOffD</td></tr>
+<tr>
+<td>$0c</td><td colspan="2" align="right">1</td><td>OffOnD</td></tr>
+<tr>
+<td>$0d</td><td colspan="2" align="right">2</td><td>EnvTp, OrnPtr</td></tr>
+<tr>
+<td>$0f</td><td colspan="2" align="right">2</td><td>SamPtr</td></tr>
+<tr>
+<td>$11</td><td colspan="2" align="right">1</td><td>NNtSkp</td></tr>
+<tr>
+<td>$12</td><td colspan="2" align="right">1</td><td>Note</td></tr>
+<tr>
+<td>$13</td><td colspan="2" align="right">1</td><td>SlToNt</td></tr>
+<tr>
+<td>$14</td><td colspan="2" align="right">1</td><td>Env_En</td></tr>
+<tr>
+<td>$15</td><td colspan="2" align="right">1</td><td>Flags</td></tr>
+<tr>
+<td>$16</td><td colspan="2" align="right">1</td><td>TnSlDl</td></tr>
+<tr>
+<td>$17</td><td colspan="2" align="right">2</td><td>TSlStp</td></tr>
+<tr>
+<td>$19</td><td colspan="2" align="right">2</td><td>TnDelt</td></tr>
+<tr>
+<td>$1b</td><td colspan="2" align="right">1</td><td>NtSkCn</td></tr>
+<tr>
+<td>$1c</td><td colspan="2" align="right">20</td><td>Volume</td></tr>
+<tr>
+<td>$30</td><td colspan="2" align="right">32</td><td>Revision</td></tr>
+<tr>
+<td>$50</td><td colspan="2" align="right">2</td><td>ap, zp_compiler_save_start</td></tr>
+<tr>
+<td>$52</td><td colspan="2" align="right">2</td><td>fp</td></tr>
+<tr>
+<td>$54</td><td colspan="2" align="right">2</td><td>sp</td></tr>
+<tr>
+<td>$56</td><td colspan="2" align="right">2</td><td>tmp0</td></tr>
+<tr>
+<td>$58</td><td colspan="2" align="right">2</td><td>tmp1</td></tr>
+<tr>
+<td>$5a</td><td colspan="2" align="right">2</td><td>tmp2</td></tr>
+<tr>
+<td>$5c</td><td colspan="2" align="right">2</td><td>tmp3</td></tr>
+<tr>
+<td>$5e</td><td colspan="2" align="right">2</td><td>tmp4</td></tr>
+<tr>
+<td>$60</td><td colspan="2" align="right">2</td><td>tmp5</td></tr>
+<tr>
+<td>$62</td><td colspan="2" align="right">2</td><td>tmp6</td></tr>
+<tr>
+<td>$64</td><td colspan="2" align="right">2</td><td>tmp7</td></tr>
+<tr>
+<td>$66</td><td colspan="2" align="right">2</td><td>op1</td></tr>
+<tr>
+<td>$68</td><td colspan="2" align="right">2</td><td>op2</td></tr>
+<tr>
+<td>$6a</td><td colspan="2" align="right">2</td><td>tmp</td></tr>
+<tr>
+<td>$6c</td><td colspan="2" align="right">2</td><td>reg0</td></tr>
+<tr>
+<td>$6e</td><td colspan="2" align="right">2</td><td>reg1</td></tr>
+<tr>
+<td>$70</td><td colspan="2" align="right">2</td><td>reg2</td></tr>
+<tr>
+<td>$72</td><td colspan="2" align="right">2</td><td>reg3</td></tr>
+<tr>
+<td>$74</td><td colspan="2" align="right">2</td><td>reg4</td></tr>
+<tr>
+<td>$76</td><td colspan="2" align="right">2</td><td>reg5</td></tr>
+<tr>
+<td>$78</td><td colspan="2" align="right">2</td><td>reg6</td></tr>
+<tr>
+<td>$7a</td><td colspan="2" align="right">2</td><td>reg7</td></tr>
+<tr>
+<td>$7c</td><td colspan="2" align="right">52</td><td>zp_compiler_save_end</td></tr>
+<tr>
+<td>$b0</td><td colspan="2" align="right">1</td><td>PT3ZP, SETUP</td></tr>
+<tr>
+<td>$b1</td><td colspan="2" align="right">1</td><td>z80_A</td></tr>
+<tr>
+<td>$b2</td><td colspan="2" align="right">1</td><td>z80_C</td></tr>
+<tr>
+<td>$b3</td><td colspan="2" align="right">1</td><td>z80_B</td></tr>
+<tr>
+<td>$b4</td><td colspan="2" align="right">1</td><td>z80_E</td></tr>
+<tr>
+<td>$b5</td><td colspan="2" align="right">1</td><td>z80_D</td></tr>
+<tr>
+<td>$b6</td><td colspan="2" align="right">1</td><td>z80_L</td></tr>
+<tr>
+<td>$b7</td><td colspan="2" align="right">1</td><td>z80_H</td></tr>
+<tr>
+<td>$b8</td><td colspan="2" align="right">2</td><td>z80_IX</td></tr>
+<tr>
+<td>$ba</td><td colspan="2" align="right">1</td><td>z80_AP</td></tr>
+<tr>
+<td>$bb</td><td colspan="2" align="right">1</td><td>TA1, val1</td></tr>
+<tr>
+<td>$bc</td><td colspan="2" align="right">1</td><td>TA2</td></tr>
+<tr>
+<td>$bd</td><td colspan="2" align="right">1</td><td>TB1, val2</td></tr>
+<tr>
+<td>$be</td><td colspan="2" align="right">1</td><td>TB2</td></tr>
+<tr>
+<td>$bf</td><td colspan="2" align="right">1</td><td>TC1, val3</td></tr>
+<tr>
+<td>$c0</td><td colspan="2" align="right">1</td><td>TC2</td></tr>
+<tr>
+<td>$c1</td><td colspan="2" align="right">1</td><td>TB3, val4</td></tr>
+<tr>
+<td>$c2</td><td colspan="2" align="right">27</td><td>TC3</td></tr>
+<tr>
+<td>$dd</td><td colspan="2" align="right">2</td><td>SND_DESELECT</td></tr>
+<tr>
+<td>$df</td><td colspan="2" align="right">30</td><td>SND_SELREAD</td></tr>
+<tr>
+<td>$fd</td><td colspan="2" align="right">2</td><td>SND_SELWRITE</td></tr>
+<tr>
+<td>$ff</td><td colspan="2" align="right">0</td><td>SND_SELSETADDR</td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<center>Generated by MemMap version 1.1</center>
+<hr>
+	</BODY>
+</HTML>
