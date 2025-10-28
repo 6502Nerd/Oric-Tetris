@@ -1,6 +1,6 @@
 #include "lib.h"
 #include "tetris.h"
-#include "pt3.h"
+#include "pt3_lib.h"
 #include "dflat_lib.h"
 
 char gameMap[MAP_SIZE_Y][MAP_SIZE_X];

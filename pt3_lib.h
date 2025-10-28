@@ -25,4 +25,4 @@ gr_elapsed(timer)
 extern unsigned gr_elapsed(unsigned int);
 
 
-#endif // PT3_H
+#endif // PT3_LIB_H
