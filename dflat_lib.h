@@ -53,23 +53,6 @@ gr_tplot(x, y, str)
 extern void gr_tplot(int, int, char *);
 
 /*
-gr_resetTimer(timer)
-    Reset timer to zero
-    timer - pointer to unsigned int variable to hold timer value
-    Requires PT3 player to be initialized for IRQ timer to work
-*/
-extern void gr_resetTimer(unsigned int *);
-
-/*
-gr_elapsed(timer)
-    Get elapsed time in 1/50 second ticks since timer was reset
-    timer - pointer to unsigned int variable holding timer value
-    Returns number of ticks elapsed since last reset
-    Requires PT3 player to be initialized for IRQ timer to work
-*/
-extern unsigned gr_elapsed(unsigned int);
-
-/*
 kb_stick()
     Get joystick/keyboard state
     Returns bitmask of current joystick/keyboard state

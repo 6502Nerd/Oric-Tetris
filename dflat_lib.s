@@ -1,8 +1,6 @@
 #ifndef DFLAT_LIB_S
 #define DFLAT_LIB_S
 
-#include "pt3_asm.s"
-
 ;
 ; This is a simple display module
 ; called by the C part of the program
@@ -755,37 +753,5 @@ _gr_spr_upd
 	jmp gr_spr_draw
 
 mod_sz_sprite_e
-
-;* Timer by initialising value to current timer
-_gr_resetTimer
-	php
-	ldy #0			; Get low value of pointer
-	lda (sp),y
-	sta tmp0
-	iny				; Get high value of pointer
-	lda (sp),y
-	sta tmp0+1
-	dey
-	sei				; Need to get 2 bytes of timer
-	lda PT3Counter	; Get current value of PT3Counter to 
-	sta (tmp0),y	; Value pointed to by address
-	iny
-	lda PT3Counter+1
-	sta (tmp0),y
-	plp
-	rts
-
-;* Elapsed time
-_gr_elapsed
-	sec
-	php
-	sei				; Need to get 2 bytes of timer
-	lda PT3Counter
-	sbc tmp0
-	tax
-	lda PT3Counter+1
-	sbc tmp0+1
-	plp
-	rts
 
 #endif

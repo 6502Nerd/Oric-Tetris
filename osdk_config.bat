@@ -5,5 +5,5 @@
 ::
 SET OSDKADDR=$800
 SET OSDKNAME=TETRIS
-SET OSDKFILE=tetris tetris_data attractpt3 win1pt3 popcornpt3 dflat_lib
+SET OSDKFILE=tetris tetris_data attractpt3 win1pt3 popcornpt3 dflat_lib pt3_lib
 
